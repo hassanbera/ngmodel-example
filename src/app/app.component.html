@@ -1,4 +1,7 @@
 <div class="container mt-5">
-  <h1>Input Parameters Kullanımı</h1>
-  <app-child [name]="'Ahmet'"></app-child> <!-- Veriyi Child bileşenine aktarıyoruz -->
+  <h1>NgModel Kullanımı</h1>
+  <label for="nameInput">Adınız:</label>
+  <input id="nameInput" [(ngModel)]="name" class="form-control" placeholder="Adınızı yazın">
+  <p class="mt-3">Merhaba, <strong>{{ name }}</strong>!</p>
+  <app-child [name]="name"></app-child>
 </div>
